@@ -61,7 +61,14 @@
     font-size: 1rem;
   }
   
-  #start-survey {
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .btn {
     background-color: var(--primary-blue);
     color: #fff;
     border: none;
@@ -69,10 +76,13 @@
     font-size: 1rem;
     border-radius: 999px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.2s;
   }
   
-  #start-survey:hover {
+  .btn:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
   }
@@ -95,4 +105,3 @@
     bottom: 16px;
     right: 16px;
   }
-
