@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PBH Patient Survey Demo</title>
+  <!-- Core styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Dialogflow CX Messenger styles -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img src="postcover.webp" alt="PBH Logo" class="logo">
+      <h1>Botshilu Private Hospital</h1>
+      <p class="tagline">Where healthcare meets you.</p>
+      <p>We value your feedback. Please take our quick, conversational survey to help us serve you better.</p>
+      <button id="start-survey">Start Survey</button>
+    </header>
+  </div>
+
+  <!-- Dialogflow CX web messenger -->
+  <df-messenger
+    location="us-central1"
+    project-id="hospital-projects-460221"
+    agent-id="8ed93a8e-a760-431d-868d-0dbe827ae29b"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat-bubble
+      chat-title="Hospital Chatbot">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+
+  <!-- Dialogflow CX Messenger script -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <!-- Page behavior -->
+  <script defer src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+:root {
+    --primary-blue: #4466AD;
+    --primary-dark: #2B4180;
+    --text-color: #333333;
+    --bg-color: #f9f9f9;
+    --accent-color: rgba(68, 102, 173, 0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 2rem;
+    background: var(--accent-color);
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .hero h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary-blue);
+  }
+  
+  .tagline {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    font-style: italic;
+  }
+  
+  .hero p {
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1rem;
+  }
+  
+  #start-survey {
+    background-color: var(--primary-blue);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  #start-survey:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  /* Hide the widget by default */
+  df-messenger {
+    display: none !important;
+  }
+  
+  /* Show widget when body has .chat-active */
+  body.chat-active df-messenger {
+    display: block !important;
+    z-index: 999;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: 'Google Sans';
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+  }
+
